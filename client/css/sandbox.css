@@ -1,0 +1,42 @@
+/* CSS declarations go here */
+.green { 
+	background-color: #bfbfbf; 
+}
+
+.mainbuttonl { 
+	background-color: #ffffff;
+	color: #000000;
+	width: 100%;
+	text-align: center;
+	margin-top: 3em;
+}
+
+.mainbuttonr { 
+	background-color: #ffffff;
+	color: #000000;
+	width: 100%;
+	text-align: center;
+	margin-top: 3em;
+}
+
+.mainbuttonr:hover { 
+	background-color: #bfbfbf;
+}
+
+.mainbuttonl:hover { 
+	background-color: #bfbfbf;
+}
+
+.logo { 
+	margin-left: 25%;
+	width: 50%;
+}
+
+.top-logo {
+	height: 100%;
+}
+
+.stuff {
+	margin-top: 6em;
+	display:inline-block;
+}
