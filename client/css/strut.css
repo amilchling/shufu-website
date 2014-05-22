@@ -1,18 +1,55 @@
 
-#center-area{
-	height:70%;
-	text-align: center;
+.twinkle{
+	-webkit-animation: sparkle 5s linear 1s infinite alternate;
+	animation: sparkle 5s linear 1s infinite alternate;
+}
+
+@-webkit-keyframes sparkle{
+	from { background-color: white !important;}
+	to {background-color: #ffff99;}
+}
+
+@keyframes sparkle{
+	from { background-color: white !important;}
+	to {background-color: #ffff99;}
+}
+
+#logo-img{
+	position: relative;
+	z-index: 100;
+}
+
+.fixed{
+	z-index: 1000;
+}
+
+#logo-row{
+	height: 60%
+}
+
+#button-row{
+	height: 20%;
 }
 
 #subheading-row{
 	height: 20%;
-	background-color: lightgray;
-	color: white;
+	color: black;
+	font-size: 5em;
 	width: 100%;
 }
 
 .cat-circle{
 	margin-top: 10px;
+}
+
+.hiku{
+	font-size: .5em;
+}
+
+.logo { 
+	z-index: 100;
+	width: 50%;
+	margin-left: 20px;
 }
 
 .black-border{
@@ -27,4 +64,43 @@
 	-moz-border-radius:15px;
 	-webkit-border-radius:15px;
 	border-radius:15px;
+}
+
+.mainbutton { 
+	background-color: #575757;
+	color: #ffffff;
+	text-align: center;
+	z-index: 10;
+}
+
+.mainbutton:hover{
+	color:black;
+	background-color: white;
+	font-weight: bold;
+}
+
+#plus{
+	color:white;
+	margin-top: 4px;
+}
+
+#d-button{
+	margin-right: 55px;
+}
+
+#app-button{
+	margin-left: 55px;
+}
+
+.test-circle{
+	position: absolute;
+	top: 25px;
+	left: 25px;
+
+	width: 10px;
+	height: 10px;
+	background-color: white;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
 }

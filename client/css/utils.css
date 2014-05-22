@@ -31,3 +31,7 @@
 .parent {overflow: hidden;}
 
 .center-text {text-align: center;}
+
+.black-background{ background-color: black;}
+
+.inline {display: inline;}

@@ -1,37 +1,61 @@
+
+<template name="nav">
+  <div class="fixed">
+  <nav class="top-bar" data-topbar>
+    
+    <ul class="title-area">
+    	<li class="name"><h1><a href="#">Contact</a></h1></li>
+    	<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li><a href="#logo-row">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Portfolio</a></li>
+      </ul>
+      <ul class="left">
+      </ul>
+    </section>
+  </nav>
+  </div>
+</template>
+
 <template name="mainArea">
-
-<div class="row" id="center-area">
-	<div class="large-4 columns">
-	<div class="placeholder-img center-horiz center-vert">IMG 300x400px</div>
-	</div>
-
-	<div class="large-4 columns">
-	<div class="cheesy-tagline center-horiz center-vert"><h4>We help you grow</h4></div>
-	</div>
-
-	<div class="large-4 columns">
-	<div class="placeholder-img center-horiz center-vert">IMG 300x400px</div>
+<div class="row full-width black-background" id="logo-row">
+	<div class="small-12 columns" id="logo-columns">
+		<div class="center-horiz logo">
+			<img id="logo-img" src="img/shufulogo.png">
+		</div>
+		{{{stars}}}
 	</div>
 </div>
 
+<div class="row full-width black-background" id="button-row">
+    <div class="medium-12 columns text-center inline">
+        <a href="#" class="button mainbutton text-right inline" id="d-button"> D E S I G N </a>
+    	<h1 class="center-text inline" id="plus">+</h1>
+     	<a href="#" class="button mainbutton text-left inline" id="app-button">APP DEVELOPMENT</a>
+    </div>
+</div>
 </template>
+
+
+
 
 <template name="subHeading">
+	<div class="row" id="subheading-row">
 
-	<div class="row full-width" id="subheading-row">
-
-	<div class="large-6 columns">
-		<div class="circle center-horiz parent cat-circle"> <p class="center-vert center-text">Design</p> </div>
-		<h5 class="center-text"> From logos and stationary to fluid user experience.</h5>
+	<div class="small-12 columns">
+	<p class="center-text hiku"> We take your projects and turn them into beautiful applications while you are
+		comfortable and relaxed.</p>
 	</div>
-
-	<div class="large-6 columns">
-		<div class="circle center-horiz parent cat-circle"> <p class="center-vert center-text"> Development</p> </div>
-		<h5 class="center-text"> Innovative software, custom made for your needs.</h5>
-	</div>
-
 	</div>
 </template>
+
+
 
 <template name="design">
 	<div class="row ">
