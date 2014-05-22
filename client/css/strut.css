@@ -1,0 +1,30 @@
+
+#center-area{
+	height:70%;
+	text-align: center;
+}
+
+#subheading-row{
+	height: 20%;
+	background-color: lightgray;
+	color: white;
+	width: 100%;
+}
+
+.cat-circle{
+	margin-top: 10px;
+}
+
+.black-border{
+	border: 2px solid black;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+}
+
+.gray-border{
+	border: 2px solid #e5e5e5;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+}
