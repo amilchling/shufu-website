@@ -4,10 +4,11 @@ Template.mainArea.stars = function(){
 }
 
 Template.mainArea.rendered = function(){
-	createStars(500, 5);
+	createStars(110, 3);
 }
 
 function createStars(numStars, maxSize){
+	var grays = ['lightgray', 'gray', 'darkgray', '#333', '#e5e5e5e5']
 	var MINSIZE = 1;
 	var logoEl = $("#logo-columns");
 	var width = $(window).width();
@@ -22,6 +23,7 @@ function createStars(numStars, maxSize){
 
 		randomSize += Math.random() * 2;
 		var radius = Math.ceil(randomSize/2);
+		var random_gray = Math.floor((Math.random() * grays.length));
 
 		var css = {
 			"position" : "absolute",
@@ -32,14 +34,12 @@ function createStars(numStars, maxSize){
 			"-moz-border-radius" : radius+"px",
 			"-webkit-border-radius" : radius+"px",
 			"border-radius" : radius+"px",
-			"background-color" : "white",
+			"background-color" : grays[random_gray],
 			"z-index" : "1"
 		}
 		newEl.css(css);
+		
 
-		if(Math.random() > .65){
-			newEl.addClass("twinkle");
-		}
 		logoEl.append(newEl);
 	}
 }

@@ -2,13 +2,19 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
-      "zurb-foundation": {}
+      "zurb-foundation": {},
+      "foundation-icons-general": {}
     },
     "packages": {
       "zurb-foundation": {
         "git": "https://github.com/MixinLabs/meteor-foundation.git",
         "tag": "v5.2.2-0.0.1",
         "commit": "afe432020cc6246fa0a243a6d2e1e031f08d98e3"
+      },
+      "foundation-icons-general": {
+        "git": "https://github.com/IainShigeoka/meteor-foundation-icons-general.git",
+        "tag": "v1.0.1",
+        "commit": "0d16dc77ffb76180d63dcbc58716bd1dbf7d66d5"
       }
     }
   }
