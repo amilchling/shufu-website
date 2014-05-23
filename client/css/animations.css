@@ -1,0 +1,30 @@
+
+.twinkle{
+	-webkit-animation: sparkle 15s;
+	animation: sparkle 15s;
+}
+
+@-webkit-keyframes sparkle{
+	from { background-color: darkgray;}
+	to {background-color: white;}
+}
+
+@keyframes sparkle{
+	from { background-color: darkgray;}
+	to {background-color: white;}
+}
+
+.to-black{
+	-webkit-animation: black-anim 5s;
+	animation: black-anim 5s;
+}
+
+@-webkit-keyframes black-anim{
+	from { background-color: white;}
+	to {background-color: black;}
+}
+
+@keyframes black-anim{
+	from { background-color: white;}
+	to {background-color: black;}
+}

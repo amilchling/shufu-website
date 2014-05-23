@@ -1,6 +1,7 @@
 {
   "packages": {
     "zurb-foundation": {},
-    "foundation-icons-general": {}
+    "foundation-icons-general": {},
+    "stellar": {}
   }
 }

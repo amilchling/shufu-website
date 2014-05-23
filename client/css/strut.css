@@ -1,35 +1,3 @@
-
-.twinkle{
-	-webkit-animation: sparkle 15s;
-	animation: sparkle 15s;
-}
-
-@-webkit-keyframes sparkle{
-	from { background-color: darkgray;}
-	to {background-color: white;}
-}
-
-@keyframes sparkle{
-	from { background-color: darkgray;}
-	to {background-color: white;}
-}
-
-.to-black{
-	-webkit-animation: black-anim 5s;
-	animation: black-anim 5s;
-}
-
-@-webkit-keyframes black-anim{
-	from { background-color: white;}
-	to {background-color: black;}
-}
-
-@keyframes black-anim{
-	from { background-color: white;}
-	to {background-color: black;}
-}
-
-
 #logo-img{
 	position: relative;
 	z-index: 100;
@@ -54,10 +22,6 @@
 	color: #303030;
 	font-size: 5em;
 	width: 100%;
-}
-
-.cat-circle{
-	margin-top: 10px;
 }
 
 .hiku{
@@ -109,11 +73,17 @@
 }
 
 #d-button{
-	margin-right: 55px;
+	margin-left: 65px;
+	text-align: center;
+}
+
+#d-button, #app-button{
+	width: 225px;
+	text-align: center;
 }
 
 #app-button{
-	margin-left: 55px;
+	margin-right: 65px;
 }
 
 #our-photo{
@@ -129,9 +99,59 @@
 
 #about-row{
 	height: 100%;
-
 	color: #303030;
+}
 
+#portfolio-row{
+	height: 100%;
+	margin: 0 auto !important;
+}
+
+.port-img-div{
+	padding: 0;
+	background-color: #575757;
+}
+
+.site-row{
+	height: 20%;
+	margin: 0 auto;
+}
+
+#portfolio-row{
+	margin: 0 auto;
+}
+
+.site-row h5{
+	font-size: 2em;
+}
+
+.top-row{
+	height: 12%;
+	min-height: 100px;
+	margin: 0 auto;
+}
+
+.port-img{
+	background-color: #575757;
+	max-width: 100%; max-height: 100%;
+	opacity: .5;
+    filter:alpha(opacity=40);
+}
+
+.port-img:hover{
+	opacity: 1.0;
+	filter:alpha(opacity=100);
+}
+
+.small-circle{
+	width: 10px;
+	height: 10px;
+	background-color: black;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	display: inline-block;
+	margin-bottom: .5em;
 }
 
 .gray-words, .title-text{
@@ -169,6 +189,10 @@
 	font-size: 4.5em;
 	font-weight: 800;
 	text-align: center;
+}
+
+.sam-plus:hover{
+	color: #575757 !important;
 }
 
 h1, h2, h3, h4, h5, a, p{

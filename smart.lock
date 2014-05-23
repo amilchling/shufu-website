@@ -3,7 +3,8 @@
   "dependencies": {
     "basePackages": {
       "zurb-foundation": {},
-      "foundation-icons-general": {}
+      "foundation-icons-general": {},
+      "stellar": {}
     },
     "packages": {
       "zurb-foundation": {
@@ -15,6 +16,11 @@
         "git": "https://github.com/IainShigeoka/meteor-foundation-icons-general.git",
         "tag": "v1.0.1",
         "commit": "0d16dc77ffb76180d63dcbc58716bd1dbf7d66d5"
+      },
+      "stellar": {
+        "git": "https://github.com/noorderstorm/meteor-stellar.git",
+        "tag": "v0.1.0",
+        "commit": "1ca2f68e0cca5967a6f88545cea12055c9fc2465"
       }
     }
   }

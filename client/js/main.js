@@ -1,13 +1,28 @@
 
-Template.mainArea.stars = function(){
+Meteor.startup(function(){
+	$(window).resize(function(evt){
+		Session.set('stars', new Date());
+	});
 
+	$(window).stellar();
+});
+
+Template.mainArea.stars = function(){
+	createStars(110, 3);
+	return Session.get('stars');
 }
 
 Template.mainArea.rendered = function(){
 	createStars(110, 3);
 }
 
+var stars = [];
+
 function createStars(numStars, maxSize){
+	for(var i = 0; i < stars.length; i++){
+		stars[i].remove();
+	}
+
 	var grays = ['lightgray', 'gray', 'darkgray', '#333', '#e5e5e5e5']
 	var MINSIZE = 1;
 	var logoEl = $("#logo-columns");
@@ -25,6 +40,10 @@ function createStars(numStars, maxSize){
 		var radius = Math.ceil(randomSize/2);
 		var random_gray = Math.floor((Math.random() * grays.length));
 
+		if((randomX + randomSize) > width){
+			randomX -= (randomSize+1)
+		}
+
 		var css = {
 			"position" : "absolute",
 			"left" : randomX+"px",
@@ -39,7 +58,7 @@ function createStars(numStars, maxSize){
 		}
 		newEl.css(css);
 		
-
+		stars.push(newEl);
 		logoEl.append(newEl);
 	}
 }
