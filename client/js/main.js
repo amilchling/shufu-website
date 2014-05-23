@@ -21,6 +21,7 @@ function createStars(numStars, maxSize){
 		var randomSize = Math.floor((Math.random() * maxSize) + MINSIZE);
 
 		randomSize += Math.random() * 2;
+		var radius = Math.ceil(randomSize/2);
 
 		var css = {
 			"position" : "absolute",
@@ -28,9 +29,9 @@ function createStars(numStars, maxSize){
 			"top" : randomY+"px",
 			"width" : randomSize+"px",
 			"height" : randomSize+"px",
-			"-moz-border-radius" : (randomSize/2)+"px",
-			"-webkit-border-radius" : (randomSize/2)+"px",
-			"border-radius" : (randomSize/2)+"px",
+			"-moz-border-radius" : radius+"px",
+			"-webkit-border-radius" : radius+"px",
+			"border-radius" : radius+"px",
 			"background-color" : "white",
 			"z-index" : "1"
 		}
@@ -39,7 +40,6 @@ function createStars(numStars, maxSize){
 		if(Math.random() > .65){
 			newEl.addClass("twinkle");
 		}
-		console.log("css: " + css);
 		logoEl.append(newEl);
 	}
 }

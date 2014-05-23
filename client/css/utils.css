@@ -19,6 +19,11 @@
 	margin-top: 50%;
 }
 
+.center-justify{
+	text-align: justify;
+	margin: 0 auto;
+}
+
 .circle{
 	width: 100px;
 	height: 100px;

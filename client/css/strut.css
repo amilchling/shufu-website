@@ -17,6 +17,7 @@
 #logo-img{
 	position: relative;
 	z-index: 100;
+	
 }
 
 .fixed{
@@ -29,11 +30,12 @@
 
 #button-row{
 	height: 20%;
+	border-bottom: 2px solid gray;
 }
 
 #subheading-row{
 	height: 20%;
-	color: black;
+	color: #303030;
 	font-size: 5em;
 	width: 100%;
 }
@@ -44,11 +46,14 @@
 
 .hiku{
 	font-size: .5em;
+	font-weight: 900;
 }
 
 .logo { 
 	z-index: 100;
 	width: 50%;
+	max-width: 800px;
+	min-width: 500px;
 	margin-left: 20px;
 }
 
@@ -71,16 +76,19 @@
 	color: #ffffff;
 	text-align: center;
 	z-index: 10;
+	font-weight: 600;
 }
 
 .mainbutton:hover{
 	color:black;
 	background-color: white;
-	font-weight: bold;
+	font-weight: 600;
 }
 
 #plus{
-	color:white;
+	position: relative;
+	z-index: 75;
+	color:#37FDFC;
 	margin-top: 4px;
 }
 
@@ -92,15 +100,61 @@
 	margin-left: 55px;
 }
 
-.test-circle{
-	position: absolute;
-	top: 25px;
-	left: 25px;
+#our-photo{
+	width:375px;
+	max-width: 500px;
+	min-width: 200px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid gray;
+	margin-top: 20px;
+}
 
-	width: 10px;
-	height: 10px;
-	background-color: white;
+#about-row{
+	height: 100%;
+
+	color: #303030;
+
+}
+
+.gray-words, .title-text{
+	color:#303030;
+}
+
+#bio-text{
+	margin: 10px auto;
+	width: 40em;
+	font-weight: 400;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: #f8f8f8;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	border-radius:5px;
+	border: 1px solid #d8d8d8;
+	padding: 5px;
+}
+
+#bio-circle{
+	width: 100px;
+	height: 100px;
+	background-color: black;
+	-moz-border-radius:50px;
+	-webkit-border-radius:50px;
+	border-radius:50px;
+}
+
+#bio-circle h1{
+	color: white;
+	margin-top: 25px;
+}
+
+.title-text{
+	font-size: 4.5em;
+	font-weight: 800;
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5, a, p{
+	font-family: 'Source Sans Pro', sans-serif;
 }
