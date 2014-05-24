@@ -23,43 +23,47 @@
   </div>
 </template>
 
+<!-- FRONT PAGE -->
 <template name="mainArea">
 <div class="row full-width black-background" id="logo-row">
 	<div class="small-12 columns" id="logo-columns">
 		<div class="center-horiz logo">
-			<img id="logo-img" src="img/shufuclear.png">
+			<strong class="hide-for-large-up">
+				<img class="logo-fengshui" id="logo-img" src="img/shufuclear.png">
+			</strong>
+			<strong class="hide-for-small-only hide-for-medium-only">
+				<img id="logo-img" src="img/shufuclear.png">
+			</strong>
 		</div>
 		<div class="hide">{{stars}}</div>
 	</div>
 </div>
 
+<!-- MAIN BUTTONS -->
 <div class="row full-width black-background" id="button-row">
-    <div class="medium-12 columns text-center inline">
-    	<div class="medium-5 columns center-horiz center-text">
-        	<a href="#" class="button mainbutton" id="d-button"> D E S I G N </a>
-        </div>
-        <div class="medium-2 columns center-text">
-    		<h1 class="center-text inline" id="plus">+</h1>
-    	</div>
-    	<div class="medium-5 columns center-horiz center-text">
-     		<a href="#" class="button mainbutton" id="app-button">APP DEVELOPMENT</a>
-     	</div>
+    <div class="medium-5 columns center-text inline">
+        <a href="#" class="button expand mainbutton" > DESIGN </a>
+    </div>
+    <div class="medium-2 columns center-text">
+    	<h1 id="plus">+</h1>
+    </div>
+    <div class="medium-5 columns center-text inline">
+     	<a href="#" class="button expand mainbutton">APPLICATION DEVELOPMENT</a>
     </div>
 </div>
 </template>
 
 
-
+<!-- BLURB -->
 
 <template name="subHeading">
 	<div class="row" id="subheading-row">
 
-	<div class="small-12 columns">
-	<p class="center-text hiku"> We take your projects and turn them into beautiful applications, so you can be
-		comfortable and relaxed.</p>
+	<div class="large-12 columns">
+	<p class="center-text hiku">We take your projects and products<br>and transform them into the most comfortable experiences<br>for you and your users. 
+	</p>
 	</div>
 	</div>
-	<hr/>
 </template>
 
 
@@ -91,46 +95,42 @@
 		</div>
 		</div>
 	</div>
-	<hr/>
 </template>
 
+<!-- PORTFOLIO -->
 <template name="portfolio">
-	<div class="row" id="portfolio-row">
-		<div class="row top-row"> <!-- title row -->
-			<p class="title-text">P O R T F O L I O</p>
+	<div class="row full-width black-background" id="portfolio-row">
+		<div class="large-12 columns center-text inline">
+			<p class="portfoliotitle center-text inline">P O R T F O L I O</p>
 		</div>
-		<div class="row site-row"><!-- johnson family law -->
-			<div class="medium-2 columns">
-				<h5>Johnson Family Law</h5>
+	</div>
+	<div class="row full-width black-background" id="portfolio-row">
+		<div class="row">
+			<div class="medium-3 columns white-background  portheight  full-width">
+			<h5 class="porttitle">Johnson Family Law</h5>
 			</div>
-			<div class="medium-10 columns port-img-div">
-				<img class="port-img" src="img/familylaw.png">
-			</div>
-		</div>
-		<div class="row site-row"><!-- DRMB -->
-			<div class="medium-10 columns port-img-div">
-				<img class="port-img right" src="img/familylaw.png">
-			</div>
-			<div class="medium-2 columns">
-				<h5>Dr. Moneybags</h5>
+			<div class="medium-9 columns portheight full-width port-img-div">
+				<img class="port-img" src="img/sitefiller1.png">
 			</div>
 		</div>
-		<div class="row site-row"><!-- Allied -->
-			<div class="medium-2 columns">
-				<h5>Allied <br/></h5>
+
+		<div class="row">
+			<div class="medium-9 columns portheight full-width port-img-div">
+				<img class="port-img" src="img/filler2.png">
 			</div>
-			<div class="medium-10 columns port-img-div">
-				<img class="port-img" src="img/familylaw.png">
+			<div class="medium-3 columns white-background  portheight  full-width">
+				<h5 class="porttitle">Dr. MoneyBags</h5>
 			</div>
 		</div>
-		<div class="row site-row"><!-- Shufu -->
-			<div class="medium-10 columns port-img-div">
-				<img class="port-img right" src="img/familylaw.png">
+
+		<div class="row">
+			<div class="medium-3 columns white-background portheight full-width">
+				<h5 class="porttitle">Allied Management Group</h5>
 			</div>
-			<div class="medium-2 columns">
-				<h5>Shufu</h5>
+			<div class="medium-9 columns portheight full-width port-img-div">
+				<img class="port-img" src="img/filler3.png">
 			</div>
 		</div>
 	</div>
-	<hr/>
+		
 </template>

@@ -4,6 +4,11 @@
 	max-width: 100%;
 }
 
+.row.full-height{
+	height: 100%;
+	max-height: 100%;
+}
+
 .placeholder-img{
 	background-color: #f5f5f5;
 	width: 200px;
@@ -38,5 +43,7 @@
 .center-text {text-align: center;}
 
 .black-background{ background-color: black;}
+
+.white-background{ background-color: white;}
 
 .inline {display: inline;}

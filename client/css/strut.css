@@ -1,3 +1,5 @@
+
+
 #logo-img{
 	position: relative;
 	z-index: 100;
@@ -9,33 +11,36 @@
 }
 
 #logo-row{
-	height: 60%
+	height: 60%;
 }
 
 #button-row{
-	height: 20%;
-	border-bottom: 2px solid gray;
-}
-
-#subheading-row{
-	height: 20%;
-	color: #303030;
-	font-size: 5em;
-	width: 100%;
+	padding-right: 2em;
+	padding-left: 2em;
+	padding-bottom: 1em;
 }
 
 .hiku{
-	font-size: .5em;
-	font-weight: 900;
+	margin-top: 1em;
+	font-family: 'Lato', sans-serif; 
+	font-weight: 400;
+	font-size: 2em;
 }
 
 .logo { 
 	z-index: 100;
 	width: 50%;
+	padding-bottom: 2em;
 	max-width: 800px;
-	min-width: 500px;
+	min-width: 400px;
 	margin-left: 20px;
+
 }
+
+.logo-fengshui {
+	padding-top: 10%;
+}
+
 
 .black-border{
 	border: 2px solid black;
@@ -52,23 +57,27 @@
 }
 
 .mainbutton { 
-	background-color: #575757;
+	background-color: #000000;
 	color: #ffffff;
+	font-family: 'Lato', sans-serif; 
+	font-weight: 400;
+	font-size: 1.3em;
 	text-align: center;
-	z-index: 10;
-	font-weight: 600;
+	width: 70%;
+	z-index: 100;
 }
 
 .mainbutton:hover{
-	color:black;
-	background-color: white;
-	font-weight: 600;
+	font-family: 'Lato', sans-serif; 
+	font-weight: 400;
+	background-color: #ffffff;
+	color: #000000;
+	z-index: 100;
 }
 
 #plus{
-	position: relative;
-	z-index: 75;
-	color:#37FDFC;
+	color: white;
+	font-size: 2.5em;
 	margin-top: 4px;
 }
 
@@ -98,18 +107,24 @@
 }
 
 #about-row{
-	height: 100%;
 	color: #303030;
 }
 
 #portfolio-row{
-	height: 100%;
 	margin: 0 auto !important;
+	padding-top: 4em;
 }
 
 .port-img-div{
 	padding: 0;
 	background-color: #575757;
+}
+.portfoliotitle{
+	margin-top: 1em;
+	font-family: 'Lato', sans-serif; 
+	font-weight: 400;
+	font-size: 3em;
+	color: white;
 }
 
 .site-row{
@@ -126,13 +141,17 @@
 }
 
 .top-row{
-	height: 12%;
-	min-height: 100px;
 	margin: 0 auto;
+}
+
+.portheight{
+	max-height: 15em;
 }
 
 .port-img{
 	background-color: #575757;
+	margin-top: 0;
+	margin-bottom: 0;
 	max-width: 100%; max-height: 100%;
 	opacity: .5;
     filter:alpha(opacity=40);
@@ -141,6 +160,13 @@
 .port-img:hover{
 	opacity: 1.0;
 	filter:alpha(opacity=100);
+}
+
+.porttitle {
+	color: white;
+	font-family: 'Lato', sans-serif; 
+	font-weight: 400;
+	font-size: 3em;
 }
 
 .small-circle{
@@ -193,6 +219,11 @@
 
 .sam-plus:hover{
 	color: #575757 !important;
+}
+
+.portfoliotitle {
+	width: 30%;
+	padding-bottom: 2em;
 }
 
 h1, h2, h3, h4, h5, a, p{
