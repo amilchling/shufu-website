@@ -5,6 +5,18 @@ Meteor.startup(function(){
 	});
 
 	$(window).stellar();
+
+	$(".port-item").mouseenter(function(){
+		$(this).find('.gray-background').css("background-color", "white")
+
+		$(this).find('h1').addClass("black");
+	});
+
+	$(".port-item").mouseleave(function(){
+		$(this).find('.gray-background').css("background-color", "#333");
+
+		$(this).find('h1').removeClass("black");
+	});
 });
 
 Template.mainArea.stars = function(){
@@ -15,6 +27,7 @@ Template.mainArea.stars = function(){
 Template.mainArea.rendered = function(){
 	createStars(110, 3);
 }
+
 
 var stars = [];
 

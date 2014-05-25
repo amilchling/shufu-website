@@ -110,13 +110,41 @@
 	color: #303030;
 }
 
-#portfolio-row{
+.portfolio-row{
 	margin: 0 auto !important;
 	padding-top: 4em;
 }
 
+
+
+.row.port-item{
+	height: 33.33333%;
+	min-height: 165px;
+	filter:alpha(opacity=60) !important;
+	opacity: .5 !important;
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.port-item:hover{
+	background-color: white;
+	color: black;
+	opacity: 1.0 !important;
+	filter:alpha(opacity=100) !important;
+}
+
+#portfolios-row{
+	height: 20%;
+}
+#examples-row{
+	height: 80%;
+	min-height: 575px;
+}
+
 .port-img-div{
 	padding: 0;
+	min-height: 165px;
 	background-color: #575757;
 }
 .portfoliotitle{
@@ -128,8 +156,10 @@
 }
 
 .site-row{
-	height: 20%;
 	margin: 0 auto;
+	min-height: 150px;
+	height: 150px;
+	line-height: 150px;
 }
 
 #portfolio-row{
@@ -148,25 +178,49 @@
 	max-height: 15em;
 }
 
-.port-img{
-	background-color: #575757;
-	margin-top: 0;
-	margin-bottom: 0;
-	max-width: 100%; max-height: 100%;
-	opacity: .5;
-    filter:alpha(opacity=40);
+.port-img:before{
+	padding-bottom: 50%;
+	content: "";
+	display: block;
 }
 
-.port-img:hover{
-	opacity: 1.0;
-	filter:alpha(opacity=100);
+#moneybags-img:before{
+	padding-bottom: 45%;
+	content: "";
+	display: block;
 }
+
+
+#moneybags-img{
+	background-image:url(/img/filler2.png);
+}
+
+.port-img, #moneybags-img{
+	min-height: 165px;
+	background-color: #909090;
+	max-height: 100%;
+	overflow: hidden;
+	background-position: 75%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+    
+}
+
+
 
 .porttitle {
 	color: white;
 	font-family: 'Lato', sans-serif; 
 	font-weight: 400;
-	font-size: 3em;
+}
+
+.porttitle.black{
+	color: black;
+}
+
+.port-center-text{
+	margin-top: 25px;
 }
 
 .small-circle{
@@ -224,6 +278,16 @@
 .portfoliotitle {
 	width: 30%;
 	padding-bottom: 2em;
+}
+
+.gray-background{
+	background-color: #333;
+}
+
+.row.wrapper{
+	height: 100%;
+	margin-left: 0;
+	margin-right: 0;
 }
 
 h1, h2, h3, h4, h5, a, p{

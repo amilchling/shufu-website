@@ -99,38 +99,50 @@
 
 <!-- PORTFOLIO -->
 <template name="portfolio">
-	<div class="row full-width black-background" id="portfolio-row">
+	<div class="row full-width black-background portfolio-row" id="portfolio-heading">
 		<div class="large-12 columns center-text inline">
 			<p class="portfoliotitle center-text inline">P O R T F O L I O</p>
 		</div>
 	</div>
-	<div class="row full-width black-background" id="portfolio-row">
-		<div class="row">
-			<div class="medium-3 columns white-background  portheight  full-width">
-			<h5 class="porttitle">Johnson Family Law</h5>
+	<div class="row full-width black-background center-text portfolio-row" id="examples-row">
+		<div class="row wrapper">
+		<div class="row port-item" data-reveal-id="johnson-modal">
+			<div class="medium-6 columns gray-background full-height ">
+			<h1 class="porttitle port-center-text">Johnson Family Law</h1>
+			<h5 class="subheader port-center-text">print and web design</h5>
 			</div>
-			<div class="medium-9 columns portheight full-width port-img-div">
-				<img class="port-img" src="img/sitefiller1.png">
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="medium-9 columns portheight full-width port-img-div">
-				<img class="port-img" src="img/filler2.png">
-			</div>
-			<div class="medium-3 columns white-background  portheight  full-width">
-				<h5 class="porttitle">Dr. MoneyBags</h5>
+			<div class="medium-6 columns port-img-div full-height">
+				<div class="port-img" style="background-image:url(img/familylaw.png)"></div>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="medium-3 columns white-background portheight full-width">
-				<h5 class="porttitle">Allied Management Group</h5>
+		<div class="row port-item">
+			
+			<div class="medium-6 columns gray-background full-height right">
+				<h1 class="porttitle port-center-text">Dr. Moneybags</h1>
+				<h5 class="subheader port-center-text">illustration and app development</h5>
 			</div>
-			<div class="medium-9 columns portheight full-width port-img-div">
-				<img class="port-img" src="img/filler3.png">
+			<div class="medium-6 columns port-img-div full-height">
+				<div class="port-img" id="moneybags-img"></div>
+			</div>
+			
+		</div>
+
+		<div class="row port-item">
+			<div class="medium-6 columns gray-background full-height">
+				<h1 class="porttitle port-center-text">Allied Management Group</h1>
+				<h5 class="subheader port-center-text">web design and development</h5>
+			</div>
+			<div class="medium-6 columns port-img-div full-height">
+				<div class="port-img" style="background-image:url(img/filler3.png)"></div>
 			</div>
 		</div>
+		</div>
+	</div>
+
+	<div id="johnson-modal" class="reveal-modal" data-reveal>
+	<h1 class="center-text"> Johnson Family Law </h1>
+	<a class="close-reveal-modal">&#215;</a>
 	</div>
 		
 </template>
