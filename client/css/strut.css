@@ -1,4 +1,18 @@
+#services-row {
+	padding-bottom: 50px;
 
+}
+
+.sub-nav dd.active a{
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+.my-nav{
+	z-index: 10000;
+	background-color: black;
+}
 
 #logo-img{
 	position: relative;
@@ -238,6 +252,15 @@
 	color:#303030;
 }
 
+.circles-row h4{
+	font-weight: 700;
+}
+
+#bio-header{
+	color:white;
+	padding-top: 6px;
+}
+
 #bio-text{
 	margin: 10px auto;
 	width: 40em;
@@ -251,7 +274,7 @@
 	padding: 5px;
 }
 
-#bio-circle{
+.bio-circle{
 	width: 100px;
 	height: 100px;
 	background-color: black;
@@ -288,6 +311,10 @@
 	height: 100%;
 	margin-left: 0;
 	margin-right: 0;
+}
+
+.process-circle h4{
+	margin-bottom: 0;
 }
 
 h1, h2, h3, h4, h5, a, p{

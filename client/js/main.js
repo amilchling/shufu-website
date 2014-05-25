@@ -17,6 +17,14 @@ Meteor.startup(function(){
 
 		$(this).find('h1').removeClass("black");
 	});
+
+	$(".process-circle").mouseenter(function(){
+		console.log($(this).closest(".process-circle").data("visible"))
+		if(!$(this).closest(".process-circle").data("visible")){
+			$(this).find('.hidden').css({"opacity": 0, "visibility": "visible"}).animate({opacity:1}, 1000);
+			$(this).closest(".process-circle").data("visible", true)
+		}
+	});
 });
 
 Template.mainArea.stars = function(){
