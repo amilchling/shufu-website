@@ -4,6 +4,14 @@
 	color: #333;
 }
 
+.form-box{ margin-top: -15px !important;}
+
+
+.row .row{
+	margin-left: 0;
+	margin-right: 0;
+}
+
 #email-textarea{
 	margin-bottom: 15px;
 }
@@ -59,7 +67,7 @@
 	width: 50%;
 	padding-bottom: 2em;
 	max-width: 800px;
-	min-width: 400px;
+	min-width: 300px;
 	margin-left: 20px;
 
 }
@@ -276,7 +284,6 @@
 
 #bio-text{
 	margin: 10px auto;
-	width: 40em;
 	font-weight: 400;
 	font-family: 'Source Sans Pro', sans-serif;
 	background-color: #f8f8f8;

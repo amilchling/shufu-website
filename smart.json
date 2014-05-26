@@ -2,6 +2,7 @@
   "packages": {
     "zurb-foundation": {},
     "foundation-icons-general": {},
-    "stellar": {}
+    "stellar": {},
+    "moment": {}
   }
 }

@@ -1,6 +1,6 @@
-.hidden{
-	visibility: hidden;
-}
+.hidden{ visibility: hidden;}
+
+.hide { display: none;}
 
 .section-header{
 	height: 2px;

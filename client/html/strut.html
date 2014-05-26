@@ -76,7 +76,7 @@
 		</div>
 		</div>
 		<div class="row">
-		<div class="small-12 columns">
+		<div class="small-12 medium-6 columns small-centered">
 			<div class="center-horiz parent bio-circle"><h1 class="center-text" id="bio-header"> Bio </h1></div>
 			<p id="bio-text" class="center-justify"> Sam started coding in sixth grade and hasn’t stopped. Allison’s eternal objective is to progress out from  her stint as a high school art snob. Both of us have longstanding passions for accurate, intuitive design. We love getting to know people and equipping them with their own fresh and functional aesthetic. <br/><br/>
 
@@ -212,16 +212,20 @@
 		</div>
 		<div class="medium-6 columns">
 			<h2> Send us a message </h2>
-			<form data-abide id="email-form">
+			<form data-abide="ajax" id="email-form">
 				<div class="name-field">
-					<input id="contact-name" type="text" required pattern="[a-zA-z]+" placeholder="Name">
+					<input id="contact-name" type="text" required pattern="[a-zA-z]+" placeholder="Your Name">
 					<small class="error"> Name is required and it must be only letters </small>
 				</div>
 				<div class="email-field">
-					<input id="contact-name" type="email" required placeholder="Email Address">
+					<input id="contact-address" type="email" required placeholder="Your Email Address">
 					<small class="error"> A valid email address is required</small>
 				</div>
-				<textarea rows="4" cols="50" placeholder="Your Message" id="email-textarea"></textarea>
+				<div class="text-field">
+					<textarea rows="4" cols="50" required placeholder="Your Message" id="email-textarea"></textarea>
+					<small class="error form-box"> Please enter a message</small>
+					<div class="alert-box form-box hide" id="email-alert">Sending email....</div>
+				</div>
 				<button class="button" type="submit"> Send </button>
 			</form>
 		</div>

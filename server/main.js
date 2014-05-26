@@ -1,24 +1,33 @@
+Meteor.startup(function() {
+	//process.env.MAIL_URL='smtp://postmaster%40sandboxe5181761ecf44417a8b5caa6f0846285.mailgun.org:test135@smtp.mailgun.org:587/';
+});
+
 Emails = new Meteor.Collection("emails");
 EMAIL_DAILY_LIMIT = 200;
 
 Meteor.methods({
-	sendEmail: function(from, name, text){
+	sendEmail: function(name, from, text){
 		var subject = "Website inquiry";
 		var to = "sam@shufudesign.com";
+		var cc = "allison@shufudesign.com";
 		var msg = text + "\n FROM:" + name;
 
 		check([from, name, text], [String]);
 
-		var d = new Date.getTime();
+		var d = new Date().getTime();
 		var amt = 0;
-		if(Emails.find({date: d}).count() > 0){
-			amt = Emails.findOne({date: d}).numSent;
+		var day = moment(new Date()).format('L');
+		console.log(day);
+		if(Emails.find({date: day}).count() > 0){
+			console.log("found entry");
+			amt = Emails.findOne({date: day}).numSent;
 		}
 		else{
 			Emails.insert({
-				date: d,
+				date: day,
 				numSent: 0
 			});
+			console.log(Emails.find({}).count())
 		}
 
 		if(amt < EMAIL_DAILY_LIMIT){
@@ -27,10 +36,11 @@ Meteor.methods({
 				to: to,
 				from: from,
 				subject: subject,
-				text: msg
+				text: msg,
+				cc: cc
 			});
-			console.log("email sent from: " + from);
-			Emails.update({date: d}, {$inc: {numSent: 1}});
+			console.log("email#: " + amt);
+			Emails.update({date: day}, {$inc: {numSent: 1}});
 		}
 	}
 });
