@@ -4,8 +4,6 @@ Meteor.startup(function(){
 		Session.set('stars', new Date());
 	});
 
-	$(window).stellar();
-
 	$(".port-item").mouseenter(function(){
 		$(this).find('.gray-background').css("background-color", "white")
 
@@ -24,6 +22,27 @@ Meteor.startup(function(){
 			$(this).find('.hidden').css({"opacity": 0, "visibility": "visible"}).animate({opacity:1}, 1000);
 			$(this).closest(".process-circle").data("visible", true)
 		}
+	});
+
+	$(window).bind("load", function(){
+		var $f = $("#footer");
+		var pos = $f.position();
+		var height = $(window).height();
+		height -= pos.top;
+		height -= $f.height();
+
+		if(height > 0){
+			footer.css({'margin-top': height + 'px'});
+		}
+	});
+
+	$("#email-form").on('invalid', function(){
+		console.log("invalid");
+	})
+	.on('valid', function(event){
+		event.preventDefault();
+		console.log("valid");
+		return false;
 	});
 });
 

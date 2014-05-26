@@ -6,6 +6,7 @@
         <dd data-magellan-arrival="services"><a href="#services-row">Services</a></dd>
         <dd data-magellan-arrival="portfolio"><a href="#portfolio-heading">Portfolio</a></dd>
         <dd data-magellan-arrival="about"><a href="#about-row">About Us</a></dd>
+        <dd data-magellan-arrival="contact"><a href="#contact-row">Contact</a></dd>
       </dl>
   </div> 
 </template>
@@ -196,6 +197,45 @@
 		</div>
 	</div>
 
+</div>
+</template>
+
+<template name="contact">
+	<div class="row" id="contact-row" data-magellan-destination="contact">
+	{{#sectionHeaderWrapper title="Help Us, Help You"}}{{/sectionHeaderWrapper}}
+		<div class="medium-6 columns">
+			<h2> Our Information </h2>
+			<h4> Work: <a href="tel:+14109847717">+1 (410) 984 - 7717 </a></h4>
+			<h4> Cell: <a href="tel:+13174304646">+1 (317) 430 - 4646 </a></h4>
+			<h4>  Sam's Email: <a href="mailto:sam@shufudesign.com">sam@shufudesign.com </a></h4> 
+			<h4>  Allison's Email: <a href="mailto:allison@shufudesign.com">allison@shufudesign.com </a></h4>
+		</div>
+		<div class="medium-6 columns">
+			<h2> Send us a message </h2>
+			<form data-abide id="email-form">
+				<div class="name-field">
+					<input id="contact-name" type="text" required pattern="[a-zA-z]+" placeholder="Name">
+					<small class="error"> Name is required and it must be only letters </small>
+				</div>
+				<div class="email-field">
+					<input id="contact-name" type="email" required placeholder="Email Address">
+					<small class="error"> A valid email address is required</small>
+				</div>
+				<textarea rows="4" cols="50" placeholder="Your Message" id="email-textarea"></textarea>
+				<button class="button" type="submit"> Send </button>
+			</form>
+		</div>
+	</div>
+</template>
+
+<template name="footer">
+<div id="footer">
+	<div class="row">
+	<div class="small-12 center-text">
+		<p>Shufu, Inc. 504 Englewood Ave, Durham, NC, 27701 </p>
+		
+	</div>
+	</div>
 </div>
 </template>
 
