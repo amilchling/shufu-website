@@ -1,31 +1,19 @@
 
 <template name="nav">
-  <div class="fixed">
-  <nav class="top-bar" data-topbar>
-    
-    <ul class="title-area">
-    	<li class="name"><h1><a href="#">Contact</a></h1></li>
-    	<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-    </ul>
-
-    <section class="top-bar-section">
-      <!-- Right Nav Section -->
-      <ul class="right">
-        <li><a href="#logo-row">Home</a></li>
-        <li><a href="#about-row">About Us</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#portfolio-row">Portfolio</a></li>
-      </ul>
-      <ul class="left">
-      </ul>
-    </section>
-  </nav>
-  </div>
+  <div class="my-nav" data-magellan-expedition="fixed">
+      <dl class="sub-nav right">
+        <dd data-magellan-arrival="logo"><a href="#logo-row">Home</a></dd>
+        <dd data-magellan-arrival="services"><a href="#services-row">Services</a></dd>
+        <dd data-magellan-arrival="portfolio"><a href="#portfolio-heading">Portfolio</a></dd>
+        <dd data-magellan-arrival="about"><a href="#about-row">About Us</a></dd>
+        <dd data-magellan-arrival="contact"><a href="#contact-row">Contact</a></dd>
+      </dl>
+  </div> 
 </template>
 
 <!-- FRONT PAGE -->
 <template name="mainArea">
-<div class="row full-width black-background" id="logo-row">
+<div class="row full-width black-background" data-magellan-destination="logo" id="logo-row">
 	<div class="small-12 columns" id="logo-columns">
 		<div class="center-horiz logo">
 			<strong class="hide-for-large-up">
@@ -42,13 +30,13 @@
 <!-- MAIN BUTTONS -->
 <div class="row full-width black-background" id="button-row">
     <div class="medium-5 columns center-text inline">
-        <a href="#" class="button expand mainbutton" > DESIGN </a>
+        <a href="#design-services-row" class="button expand mainbutton" > DESIGN </a>
     </div>
     <div class="medium-2 columns center-text">
     	<h1 id="plus">+</h1>
     </div>
     <div class="medium-5 columns center-text inline">
-     	<a href="#" class="button expand mainbutton">APPLICATION DEVELOPMENT</a>
+     	<a href="#app-dev-services-row" class="button expand mainbutton">APPLICATION DEVELOPMENT</a>
     </div>
 </div>
 </template>
@@ -64,12 +52,13 @@
 	</p>
 	</div>
 	</div>
+
 </template>
 
 
 
 <template name="aboutUs">
-	<div class="row" id="about-row">
+	<div class="row" data-magellan-destination="about" id="about-row">
 		<div class="row">
 		<div class="small-12 columns">
 			<p class="title-text"> YOUR NEW EMPLOYEES </p>
@@ -87,8 +76,8 @@
 		</div>
 		</div>
 		<div class="row">
-		<div class="small-12 columns">
-			<div id="bio-circle" class="center-horiz parent"><h1 class="center-text"> Bio </h1></div>
+		<div class="small-12 medium-6 columns small-centered">
+			<div class="center-horiz parent bio-circle"><h1 class="center-text" id="bio-header"> Bio </h1></div>
 			<p id="bio-text" class="center-justify"> Sam started coding in sixth grade and hasn’t stopped. Allison’s eternal objective is to progress out from  her stint as a high school art snob. Both of us have longstanding passions for accurate, intuitive design. We love getting to know people and equipping them with their own fresh and functional aesthetic. <br/><br/>
 
 			Our understanding of great design and development is to keep the priorities in line. Beautiful design, technical order, and business goals are all of equal and utmost importance. As for the people involved, we believe the user is king, the client is queen, and we’re two happy, hardworking pawns.<br/></p>
@@ -99,38 +88,165 @@
 
 <!-- PORTFOLIO -->
 <template name="portfolio">
-	<div class="row full-width black-background" id="portfolio-row">
+	<div class="row full-width black-background portfolio-row" data-magellan-destination="portfolio" id="portfolio-heading">
 		<div class="large-12 columns center-text inline">
 			<p class="portfoliotitle center-text inline">P O R T F O L I O</p>
 		</div>
 	</div>
-	<div class="row full-width black-background" id="portfolio-row">
-		<div class="row">
-			<div class="medium-3 columns white-background  portheight  full-width">
-			<h5 class="porttitle">Johnson Family Law</h5>
+	<div class="row full-width black-background center-text portfolio-row" id="examples-row">
+		<div class="row wrapper">
+		<div class="row port-item" data-reveal-id="johnson-modal">
+			<div class="medium-6 columns gray-background full-height ">
+			<h1 class="porttitle port-center-text">Johnson Family Law</h1>
+			<h5 class="subheader port-center-text">print and web design</h5>
 			</div>
-			<div class="medium-9 columns portheight full-width port-img-div">
-				<img class="port-img" src="img/sitefiller1.png">
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="medium-9 columns portheight full-width port-img-div">
-				<img class="port-img" src="img/filler2.png">
-			</div>
-			<div class="medium-3 columns white-background  portheight  full-width">
-				<h5 class="porttitle">Dr. MoneyBags</h5>
+			<div class="medium-6 columns port-img-div full-height">
+				<div class="port-img" style="background-image:url(img/familylaw.png)"></div>
 			</div>
 		</div>
 
-		<div class="row">
-			<div class="medium-3 columns white-background portheight full-width">
-				<h5 class="porttitle">Allied Management Group</h5>
+		<div class="row port-item">
+			
+			<div class="medium-6 columns gray-background full-height right">
+				<h1 class="porttitle port-center-text">Dr. Moneybags</h1>
+				<h5 class="subheader port-center-text">illustration and app development</h5>
 			</div>
-			<div class="medium-9 columns portheight full-width port-img-div">
-				<img class="port-img" src="img/filler3.png">
+			<div class="medium-6 columns port-img-div full-height">
+				<div class="port-img" id="moneybags-img"></div>
 			</div>
+			
+		</div>
+
+		<div class="row port-item">
+			<div class="medium-6 columns gray-background full-height">
+				<h1 class="porttitle port-center-text">Allied Management Group</h1>
+				<h5 class="subheader port-center-text">web design and development</h5>
+			</div>
+			<div class="medium-6 columns port-img-div full-height">
+				<div class="port-img" style="background-image:url(img/filler3.png)"></div>
+			</div>
+		</div>
 		</div>
 	</div>
+
+	<div id="johnson-modal" class="reveal-modal" data-reveal>
+	<h1 class="center-text"> Johnson Family Law </h1>
+	<a class="close-reveal-modal">&#215;</a>
+	</div>
+
+	<div id="moneybags-modal" class="reveal-modal" data-reveal>
+	<h1 class="center-text"> Dr. Moneybags </h1>
+	<a class="close-reveal-modal">&#215;</a>
+	</div>
+
+	<div id="allied-modal" class="reveal-modal" data-reveal>
+	<h1 class="center-text"> Allied Management Group </h1>
+	<a class="close-reveal-modal">&#215;</a>
+	</div>
 		
+</template>
+
+<!-- Services -->
+<template name="services">
+<div class="row" data-magellan-destination="services" id="services-row">
+
+	{{#sectionHeaderWrapper title="Our Process"}}{{/sectionHeaderWrapper}}
+
+	<div class="row full-width circles-row">
+		<div class="medium-3 columns process-circle">
+			<div class="bio-circle center-horiz"></div>
+			<h4 class="center-text">Gather</h4>
+			<h5 class="subheader center-text hidden">your ideas</h5>
+		</div>
+		<div class="medium-3 columns process-circle">
+			<div class="bio-circle center-horiz "></div>
+			<h4 class="center-text">Design</h4>
+			<h5 class="subheader center-text hidden">something beautiful and orderly</h5>
+		</div>
+		<div class="medium-3 columns process-circle">
+			<div class="bio-circle center-horiz"></div>
+			<h4 class="center-text">Code</h4>
+			<h5 class="subheader center-text hidden">it into reality</h5>
+		</div>
+		<div class="medium-3 columns process-circle">
+			<div class="bio-circle center-horiz"></div>
+			<h4 class="center-text">Impress</h4>
+			<h5 class="subheader center-text hidden">everybody with the result</h5>
+		</div>
+	</div>
+
+	{{#sectionHeaderWrapper title="Our Services"}}{{/sectionHeaderWrapper}}
+
+	<div class="row" id="design-services-row">
+		<div class="medium-7 columns">
+		<h1> Design </h1>
+		<p class="center-justify">With each design, our goal is to exactly represent your point of view. We strike a level balance between eye-catching beauty and strategic organization, keeping things clean, simple, and intuitive. Our designs captivate target audiences while further inspiring the businesses they represent. </p>
+		</div>
+		<div class="medium-5 columns">
+
+		</div>
+	</div>
+
+	<div class="row" id="app-dev-services-row">
+		<div class="medium-7 columns">
+		<h1>Application Development</h1>
+		<p class="center-justify">We want to take that idea you scribbled on a napkin and turn it into a well-oiled machine. No matter the size of the idea, we want to come alongside you and shape it into a robust application. No matter the format, we are here to construct an application that features every component of your vision.</p>
+		</div>
+		<div class="medium-5 columns">
+
+		</div>
+	</div>
+
+</div>
+</template>
+
+<template name="contact">
+	<div class="row" id="contact-row" data-magellan-destination="contact">
+	{{#sectionHeaderWrapper title="Help Us, Help You"}}{{/sectionHeaderWrapper}}
+		<div class="medium-6 columns">
+			<h2> Our Information </h2>
+			<h4> Work: <a href="tel:+14109847717">+1 (410) 984 - 7717 </a></h4>
+			<h4> Cell: <a href="tel:+13174304646">+1 (317) 430 - 4646 </a></h4>
+			<h4>  Sam's Email: <a href="mailto:sam@shufudesign.com">sam@shufudesign.com </a></h4> 
+			<h4>  Allison's Email: <a href="mailto:allison@shufudesign.com">allison@shufudesign.com </a></h4>
+		</div>
+		<div class="medium-6 columns">
+			<h2> Send us a message </h2>
+			<form data-abide="ajax" id="email-form">
+				<div class="name-field">
+					<input id="contact-name" type="text" required pattern="[a-zA-z]+" placeholder="Your Name">
+					<small class="error"> Name is required and it must be only letters </small>
+				</div>
+				<div class="email-field">
+					<input id="contact-address" type="email" required placeholder="Your Email Address">
+					<small class="error"> A valid email address is required</small>
+				</div>
+				<div class="text-field">
+					<textarea rows="4" cols="50" required placeholder="Your Message" id="email-textarea"></textarea>
+					<small class="error form-box"> Please enter a message</small>
+					<div class="alert-box form-box hide" id="email-alert">Sending email....</div>
+				</div>
+				<button class="button" type="submit"> Send </button>
+			</form>
+		</div>
+	</div>
+</template>
+
+<template name="footer">
+<div id="footer">
+	<div class="row">
+	<div class="small-12 center-text">
+		<p>Shufu, Inc. 504 Englewood Ave, Durham, NC, 27701 </p>
+		
+	</div>
+	</div>
+</div>
+</template>
+
+<template name="sectionHeaderWrapper">
+	<div class="row">
+		<div class="small-12 columns section-header">
+			<span class="middle-words">{{this.title}}</span>
+		</div>
+	</div>
 </template>

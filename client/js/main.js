@@ -4,7 +4,86 @@ Meteor.startup(function(){
 		Session.set('stars', new Date());
 	});
 
-	$(window).stellar();
+	$(".port-item").mouseenter(function(){
+		$(this).find('.gray-background').css("background-color", "white")
+
+		$(this).find('h1').addClass("black");
+	});
+
+	$(".port-item").mouseleave(function(){
+		$(this).find('.gray-background').css("background-color", "#333");
+
+		$(this).find('h1').removeClass("black");
+	});
+
+	$(".process-circle").mouseenter(function(){
+		if(!$(this).closest(".process-circle").data("visible")){
+			$(this).find('.hidden').css({"opacity": 0, "visibility": "visible"}).animate({opacity:1}, 1000);
+			$(this).closest(".process-circle").data("visible", true)
+		}
+	});
+
+	$(window).bind("load", function(){
+		var $f = $("#footer");
+		var pos = $f.position();
+		var height = $(window).height();
+		height -= pos.top;
+		height -= $f.height();
+
+		if(height > 0){
+			footer.css({'margin-top': height + 'px'});
+		}
+	});
+
+	$("#email-form").on('invalid', function(){
+		var invalid_field = $(this).find(['data-invalid']).first();
+		invalid_field.focus();
+		console.log("invalid");
+	})
+	.on('valid', function(event){
+		event.preventDefault();
+		event.stopPropagation();
+		event.stopImmediatePropagation();
+		var inputs = $(this).find('input, #email-textarea');
+		var vals = [];
+		inputs.each(function(index){
+			$(this).prop('disabled', true);
+			vals.push($(this).val());
+		});
+		console.log(vals);
+
+		var $alert = $("#email-alert");
+		var $button = $(this).find('button');
+
+		$button.prop('disabled', true);
+		$alert.slideToggle();
+
+		Meteor.apply("sendEmail", vals, function(result, error){
+			if(error){
+				console.log(error);
+				$alert.text('Error sending email. Please try again');
+				$alert.css('background-color','red');
+			}
+			else{
+				$alert.text('Email sent!');
+				$alert.addClass("success");
+				setTimeout(function(){
+					$alert.slideToggle();
+					inputs.each(function(indx){
+						$(this).prop('disabled', false);
+						$(this).val('');
+					});
+
+					$button.prop('disabled', false);
+					$alert.removeClass("success");
+
+				}, 2000);
+			}
+		});
+		
+
+		console.log("valid");
+	});
 });
 
 Template.mainArea.stars = function(){
@@ -15,6 +94,7 @@ Template.mainArea.stars = function(){
 Template.mainArea.rendered = function(){
 	createStars(110, 3);
 }
+
 
 var stars = [];
 

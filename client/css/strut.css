@@ -1,4 +1,39 @@
+#footer{
+	background-color: #e5e5e5;
+	border-top: 1px solid #909090;
+	color: #333;
+}
 
+.form-box{ margin-top: -15px !important;}
+
+
+.row .row{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#email-textarea{
+	margin-bottom: 15px;
+}
+
+#contact-row{
+}
+
+#services-row {
+	padding-bottom: 50px;
+
+}
+
+.sub-nav dd.active a{
+	border-radius: 0;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+}
+
+.my-nav{
+	z-index: 10000;
+	background-color: black;
+}
 
 #logo-img{
 	position: relative;
@@ -32,7 +67,7 @@
 	width: 50%;
 	padding-bottom: 2em;
 	max-width: 800px;
-	min-width: 400px;
+	min-width: 300px;
 	margin-left: 20px;
 
 }
@@ -110,13 +145,41 @@
 	color: #303030;
 }
 
-#portfolio-row{
+.portfolio-row{
 	margin: 0 auto !important;
 	padding-top: 4em;
 }
 
+
+
+.row.port-item{
+	height: 33.33333%;
+	min-height: 165px;
+	filter:alpha(opacity=60) !important;
+	opacity: .5 !important;
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.port-item:hover{
+	background-color: white;
+	color: black;
+	opacity: 1.0 !important;
+	filter:alpha(opacity=100) !important;
+}
+
+#portfolios-row{
+	height: 20%;
+}
+#examples-row{
+	height: 80%;
+	min-height: 575px;
+}
+
 .port-img-div{
 	padding: 0;
+	min-height: 165px;
 	background-color: #575757;
 }
 .portfoliotitle{
@@ -128,8 +191,10 @@
 }
 
 .site-row{
-	height: 20%;
 	margin: 0 auto;
+	min-height: 150px;
+	height: 150px;
+	line-height: 150px;
 }
 
 #portfolio-row{
@@ -148,25 +213,49 @@
 	max-height: 15em;
 }
 
-.port-img{
-	background-color: #575757;
-	margin-top: 0;
-	margin-bottom: 0;
-	max-width: 100%; max-height: 100%;
-	opacity: .5;
-    filter:alpha(opacity=40);
+.port-img:before{
+	padding-bottom: 50%;
+	content: "";
+	display: block;
 }
 
-.port-img:hover{
-	opacity: 1.0;
-	filter:alpha(opacity=100);
+#moneybags-img:before{
+	padding-bottom: 45%;
+	content: "";
+	display: block;
 }
+
+
+#moneybags-img{
+	background-image:url(/img/filler2.png);
+}
+
+.port-img, #moneybags-img{
+	min-height: 165px;
+	background-color: #909090;
+	max-height: 100%;
+	overflow: hidden;
+	background-position: 75%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0 auto;
+    
+}
+
+
 
 .porttitle {
 	color: white;
 	font-family: 'Lato', sans-serif; 
 	font-weight: 400;
-	font-size: 3em;
+}
+
+.porttitle.black{
+	color: black;
+}
+
+.port-center-text{
+	margin-top: 25px;
 }
 
 .small-circle{
@@ -184,9 +273,17 @@
 	color:#303030;
 }
 
+.circles-row h4{
+	font-weight: 700;
+}
+
+#bio-header{
+	color:white;
+	padding-top: 6px;
+}
+
 #bio-text{
 	margin: 10px auto;
-	width: 40em;
 	font-weight: 400;
 	font-family: 'Source Sans Pro', sans-serif;
 	background-color: #f8f8f8;
@@ -197,7 +294,7 @@
 	padding: 5px;
 }
 
-#bio-circle{
+.bio-circle{
 	width: 100px;
 	height: 100px;
 	background-color: black;
@@ -224,6 +321,20 @@
 .portfoliotitle {
 	width: 30%;
 	padding-bottom: 2em;
+}
+
+.gray-background{
+	background-color: #333;
+}
+
+.row.wrapper{
+	height: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.process-circle h4{
+	margin-bottom: 0;
 }
 
 h1, h2, h3, h4, h5, a, p{
