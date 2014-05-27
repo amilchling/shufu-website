@@ -4,6 +4,14 @@
 	color: #333;
 }
 
+#services-heading{
+	padding: 1em 0;
+}
+
+.section-header-row{
+	padding-top: 2px;
+}
+
 .form-box{ margin-top: -15px !important;}
 
 
@@ -273,8 +281,14 @@
 	color:#303030;
 }
 
+.circles-row{
+	background-color: black;
+}
+
 .circles-row h4{
-	font-weight: 700;
+	font-weight: 600;
+	color: white;
+	margin-bottom: 30px;
 }
 
 #bio-header{
@@ -294,10 +308,17 @@
 	padding: 5px;
 }
 
+.white-process-circle{
+	background-color: white;
+}
+
 .bio-circle{
+	background-color: black;
+}
+
+.bio-circle, .white-process-circle{
 	width: 100px;
 	height: 100px;
-	background-color: black;
 	-moz-border-radius:50px;
 	-webkit-border-radius:50px;
 	border-radius:50px;
