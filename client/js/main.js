@@ -20,8 +20,20 @@ Meteor.startup(function(){
 		if(!$(this).closest(".process-circle").data("visible")){
 			$(this).find('.hidden').css({"opacity": 0, "visibility": "visible"}).animate({opacity:1}, 1000);
 			$(this).closest(".process-circle").data("visible", true)
+			
+			var el;
+			if($(this).hasClass("process-img")){
+				el = $(this);
+			}
+			else{
+				el = $(this).find(".process-img");
+			}
+			var newSrc = "img/" + el.attr('id') + ".gif";
+			console.log(newSrc);
+			el.attr('src', newSrc);
 		}
 	});
+
 
 	$(window).bind("load", function(){
 		var $f = $("#footer");

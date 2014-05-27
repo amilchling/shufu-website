@@ -8,8 +8,8 @@ EMAIL_DAILY_LIMIT = 200;
 Meteor.methods({
 	sendEmail: function(name, from, text){
 		var subject = "Website inquiry";
-		var to = "sam@shufudesign.com";
-		var cc = "allison@shufudesign.com";
+		var to = "sam@shufuinc.com";
+		var cc = "allison@shufuinc.com";
 		var msg = text + "\n FROM:" + name;
 
 		check([from, name, text], [String]);

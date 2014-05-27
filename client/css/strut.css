@@ -10,6 +10,15 @@
 	padding-left: 8px;
 }
 
+.process-img.code-img{
+	height: 64px;
+	width: 600px;
+	margin-left: 9px;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 16px;
+}
+
 #services-heading{
 	padding: 1em 0;
 }
