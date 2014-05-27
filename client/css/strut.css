@@ -4,6 +4,12 @@
 	color: #333;
 }
 
+.process-img{
+	width: 91px;
+	padding-top: 9px;
+	padding-left: 8px;
+}
+
 #services-heading{
 	padding: 1em 0;
 }
