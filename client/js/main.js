@@ -34,6 +34,22 @@ Meteor.startup(function(){
 		}
 	});
 
+	$(".resume-header").click(function(event){
+		event.preventDefault();
+		$(this).siblings(".resume").slideToggle();
+		var icon = $(this).find(".foundicon-plus");
+		console.log($.data(icon, "minus"));
+		if($.data(icon, "minus") !== "true"){
+			icon.removeClass("foundicon-plus").addClass("foundicon-minus");
+			$.data(icon, "minus", "true");
+			console.log($.data(icon, "minus"));
+		}
+		else{
+			alert("here");
+			icon.removeClass("foundicon-minus").addClass("foundicon-plus");
+			$.data(icon, "minus", "false");
+		}
+	});
 
 	$(window).bind("load", function(){
 		var $f = $("#footer");
