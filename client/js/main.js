@@ -15,12 +15,16 @@ Meteor.startup(function(){
 
 		$(this).find('h1').removeClass("black");
 	});
+	$("#services-row").waypoint(function(){
+		$(this).find('.hidden').each(function(index){
+			$(this).css({"opacity": 0, "visibility": "visible"}).animate({opacity:1}, 1000);
+		});
+		$(this).waypoint('disable');
+	}, {offset: 400});
 
 	$(".process-circle").mouseenter(function(){
 		if(!$(this).closest(".process-circle").data("visible")){
-			$(this).find('.hidden').css({"opacity": 0, "visibility": "visible"}).animate({opacity:1}, 1000);
 			$(this).closest(".process-circle").data("visible", true)
-			
 			var el;
 			if($(this).hasClass("process-img")){
 				el = $(this);
@@ -37,18 +41,10 @@ Meteor.startup(function(){
 	$(".resume-header").click(function(event){
 		event.preventDefault();
 		$(this).siblings(".resume").slideToggle();
-		var icon = $(this).find(".foundicon-plus");
-		console.log($.data(icon, "minus"));
-		if($.data(icon, "minus") !== "true"){
-			icon.removeClass("foundicon-plus").addClass("foundicon-minus");
-			$.data(icon, "minus", "true");
-			console.log($.data(icon, "minus"));
-		}
-		else{
-			alert("here");
-			icon.removeClass("foundicon-minus").addClass("foundicon-plus");
-			$.data(icon, "minus", "false");
-		}
+		var icon = $(this).find(".general");
+		icon.toggleClass("foundicon-plus");
+		icon.toggleClass("foundicon-minus");
+		
 	});
 
 	$(window).bind("load", function(){

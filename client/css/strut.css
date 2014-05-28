@@ -4,6 +4,26 @@
 	color: #333;
 }
 
+.top-bar{
+	overflow: hidden;
+	background-color: black;
+}
+.top-bar-section ul{
+	background-color: black;
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button){
+	background-color: #88e0ff;
+}
+
+a{
+	color: #88e0ff;
+}
+
+.sub-nav li.active a{
+	background-color: #88e0ff;
+}
+
 .code-logo{
 	margin-top: 67px;
 	margin-left: 20px;

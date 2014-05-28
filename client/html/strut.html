@@ -1,13 +1,23 @@
 
 <template name="nav">
   <div class="my-nav" data-magellan-expedition="fixed">
-      <dl class="sub-nav right">
-        <dd data-magellan-arrival="logo"><a href="#logo-row">Home</a></dd>
-        <dd data-magellan-arrival="services"><a href="#services-row">Services</a></dd>
-        <dd data-magellan-arrival="portfolio"><a href="#portfolio-heading">Portfolio</a></dd>
-        <dd data-magellan-arrival="about"><a href="#about-row">About Us</a></dd>
-        <dd data-magellan-arrival="contact"><a href="#contact-row">Contact</a></dd>
-      </dl>
+  	<nav class="top-bar" data-topbar>
+  	  <ul class="title-area">
+  	  	<li class="name">
+  	  	<h1><a href="#"></a></h1>
+  	  	</li>
+  	  	<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+  	  </ul>
+  	  <section class="top-bar-section">
+      <ul class="right">
+        <li data-magellan-arrival="logo"><a href="#logo-row">Home</a></li>
+        <li data-magellan-arrival="services"><a href="#services-row">Services</a></li>
+        <li data-magellan-arrival="portfolio"><a href="#portfolio-heading">Portfolio</a></li>
+        <li data-magellan-arrival="about"><a href="#about-row">About Us</a></li>
+        <li data-magellan-arrival="contact"><a href="#contact-row">Contact</a></li>
+      </ul>
+      </section>
+      </nav>
   </div> 
 </template>
 
@@ -64,7 +74,7 @@
 			<p class="title-text"> ABOUT US </p>
 			<img id="our-photo" src="img/portrait.jpg">
 			<div class="row">
-				<div class="small-6 columns center-text">
+				<div class="medium-6 columns center-text">
 					<span class="resume-header">
 					<h2 class="inline center-text gray-words "> <a href="#" class="sam-plus"> Sam Johnson </a></h2> <span class="inline sam-plus"> <i class="general foundicon-plus"></i> </span></span>
 					<h5 class="center-text subheader"> End-to-end Developer </h5>
@@ -84,9 +94,28 @@
 					</li>
 					</ul>
 				</div>
-				<div class="small-6 columns center-text">
-					<h2 class="inline center-text gray-words"> Allison Milchling </h2> <span class="inline"> <i class="general foundicon-plus"></i> </span>
+				<div class="medium-6 columns center-text">
+					<span class="resume-header">
+					<h2 class="inline center-text gray-words "> <a href="#" class="sam-plus"> Allison Milchling </a></h2> <span class="inline sam-plus"> <i class="general foundicon-plus"></i> </span></span>
 					<h5 class="center-text subheader"> Designer / Front-end Developer </h5>
+					<ul class="text-left resume hide">
+					<li> <strong>2014</strong> - Freelance Designer 
+						<ul>
+							<li> Redesign / rebuilding of Allied Management Group website </li>
+							<li> Design of Johnson Family law website, business cards, stationary</li>
+						</ul>
+					</li>
+
+					<li> <strong>2012 - 2013</strong> - Graphic Designer / Program Coordinator, Crossroads Community Food Network
+						<ul>
+						<li> Logo creation </li>
+						<li> Weekly newsletter </li>
+						<li> Website Administrator </li> 
+						</ul>
+					</li>
+					<li> <strong>2012</strong> - B.S. in Chinese, University of Maryland
+					</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -145,8 +174,26 @@
 		</div>
 	</div>
 
-	<div id="johnson-modal" class="reveal-modal" data-reveal>
+	<div id="johnson-modal" class="reveal-modal center-text" data-reveal>
 	<h1 class="center-text"> Johnson Family Law </h1>
+	<a href="www.johnsonfamilylaw.net" class="text-center">www.johnsonfamilylaw.net</a>
+	<h5>Logo Design</h5>
+	<h5>Stationary</h5>
+	<h5>Responsive Web Design/Development</h5>
+	<h5>Content Writing</h5>
+	<div class="row">
+		<div class="medium-6 columns">
+			<img src="img/cardback.png">
+		</div>
+		<div class="medium-6 columns">
+			<img src="img/cardfront.png">
+		</div>
+	</div>
+	<div class="row">
+	<div class="small-12">
+		<img src="img/compshot.png">
+	</div>
+	</div>
 	<a class="close-reveal-modal">&#215;</a>
 	</div>
 
