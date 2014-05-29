@@ -112,7 +112,27 @@ Meteor.startup(function(){
 
 		console.log("valid");
 	});
+
+	$(".scroll").click(function(event){
+		event.preventDefault();
+		var offset = 150;
+		var dest=0;
+		if($(this.hash).offset().top > $(document).height()-$(window).height()){
+			dest = $(document).height - $(window).height;
+		}
+		else{
+			dest = $(this.hash).offset().top - offset;
+		}
+		$('html,body').animate({scrollTop:dest}, 1000, 'swing');
+	});
+
+	$('html,body').animate({scrollTop:5}, 1000, 'swing');
 });
+
+Template.nav.reload = function(){
+	Session.get("reload");
+	return "";
+}
 
 Template.mainArea.stars = function(){
 	createStars(110, 3);

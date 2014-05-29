@@ -1,5 +1,5 @@
 Meteor.startup(function() {
-	//process.env.MAIL_URL='smtp://postmaster%40sandboxe5181761ecf44417a8b5caa6f0846285.mailgun.org:test135@smtp.mailgun.org:587/';
+	process.env.MAIL_URL='smtp://postmaster%40sandboxe5181761ecf44417a8b5caa6f0846285.mailgun.org:test135@smtp.mailgun.org:587/';
 });
 
 Emails = new Meteor.Collection("emails");

@@ -1,21 +1,22 @@
 
 <template name="nav">
   <div class="my-nav" data-magellan-expedition="fixed">
+  	{{reload}}
   	<nav class="top-bar" data-topbar>
   	  <ul class="title-area">
-  	  	<li class="name">
-  	  	<h1><a href="#"></a></h1>
+  	  	<li data-magellan-arrival="logo" class="name">
+  	  	<h1><a href="#logo-row">SHUFU</a></h1>
   	  	</li>
   	  	<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
   	  </ul>
   	  <section class="top-bar-section">
-      <ul class="right">
-        <li data-magellan-arrival="logo"><a href="#logo-row">Home</a></li>
-        <li data-magellan-arrival="services"><a href="#services-row">Services</a></li>
-        <li data-magellan-arrival="portfolio"><a href="#portfolio-heading">Portfolio</a></li>
-        <li data-magellan-arrival="about"><a href="#about-row">About Us</a></li>
-        <li data-magellan-arrival="contact" id="contact-li"><a href="#contact-row">Contact</a></li>
-      </ul>
+	      <ul class="right">
+	        
+	        <li data-magellan-arrival="services"><a href="#services-row">Services</a></li>
+	        <li data-magellan-arrival="portfolio"><a href="#portfolio-heading">Portfolio</a></li>
+	        <li data-magellan-arrival="about"><a href="#about-row">About Us</a></li>
+	        <li data-magellan-arrival="contact" id="contact-li"><a href="#contact-row">Contact</a></li>
+	      </ul>
       </section>
       </nav>
   </div> 
@@ -40,13 +41,13 @@
 <!-- MAIN BUTTONS -->
 <div class="row full-width black-background" id="button-row">
     <div class="medium-5 columns center-text inline">
-        <a href="#design-services-row" class="button expand mainbutton" > DESIGN </a>
+        <a href="#design-services-row" class="scroll button expand mainbutton" > DESIGN </a>
     </div>
     <div class="medium-2 columns center-text">
     	<h1 id="plus">+</h1>
     </div>
     <div class="medium-5 columns center-text inline">
-     	<a href="#app-dev-services-row" class="button expand mainbutton">APPLICATION DEVELOPMENT</a>
+     	<a href="#app-dev-services-row" class="scroll button expand mainbutton">APPLICATION DEVELOPMENT</a>
     </div>
 </div>
 </template>
@@ -142,7 +143,7 @@
 		<div class="row wrapper">
 		<div class="row port-item" data-reveal-id="johnson-modal">
 			<div class="medium-6 columns gray-background full-height ">
-			<h1 class="porttitle port-center-text">Johnson Family Law</h1>
+			<h1 class="porttitle port-center-text">Johnson Family Law LLC</h1>
 			<h5 class="subheader port-center-text">print and web design</h5>
 			</div>
 			<div class="medium-6 columns port-img-div full-height">
@@ -176,7 +177,7 @@
 
 	<!-- Charles site popup -->
 	<div id="johnson-modal" class="reveal-modal center-text" data-reveal>
-		<h1 class="center-text"> Johnson Family Law </h1>
+		<h1 class="center-text"> Johnson Family Law LLC</h1>
 		<a href="www.johnsonfamilylaw.net" class="text-center">www.johnsonfamilylaw.net</a>
 		
 		<div class="row">
@@ -315,7 +316,7 @@
 
 <template name="contact">
 	<div class="row" id="contact-row" data-magellan-destination="contact">
-	{{#sectionHeaderWrapper title="Help Us, Help You"}}{{/sectionHeaderWrapper}}
+	{{#sectionHeaderWrapper title="Contact"}}{{/sectionHeaderWrapper}}
 		<div class="medium-6 columns">
 			<h2> Our Information </h2>
 			<h4> Work: <a href="tel:+14109847717">+1 (410) 984 - 7717 </a></h4>
