@@ -15,12 +15,40 @@ Meteor.startup(function(){
 
 		$(this).find('h1').removeClass("black");
 	});
+	$("#services-row").waypoint(function(){
+		$(this).find('.hidden').each(function(index){
+			$(this).css({"opacity": 0, "visibility": "visible"}).animate({opacity:1}, 1000);
+		});
+		$(this).waypoint('disable');
+	}, {offset: 400});
+
+	$("#bio-text").waypoint(function(){
+		$("#contact-li").addClass("active");
+	}, {offset: 300});
 
 	$(".process-circle").mouseenter(function(){
 		if(!$(this).closest(".process-circle").data("visible")){
-			$(this).find('.hidden').css({"opacity": 0, "visibility": "visible"}).animate({opacity:1}, 1000);
 			$(this).closest(".process-circle").data("visible", true)
+			var el;
+			if($(this).hasClass("process-img")){
+				el = $(this);
+			}
+			else{
+				el = $(this).find(".process-img");
+			}
+			var newSrc = "img/" + el.attr('id') + ".gif";
+			console.log(newSrc);
+			el.attr('src', newSrc);
 		}
+	});
+
+	$(".resume-header").click(function(event){
+		event.preventDefault();
+		$(this).siblings(".resume").slideToggle();
+		var icon = $(this).find(".general");
+		icon.toggleClass("foundicon-plus");
+		icon.toggleClass("foundicon-minus");
+		
 	});
 
 	$(window).bind("load", function(){
@@ -84,7 +112,27 @@ Meteor.startup(function(){
 
 		console.log("valid");
 	});
+
+	$(".scroll").click(function(event){
+		event.preventDefault();
+		var offset = 150;
+		var dest=0;
+		if($(this.hash).offset().top > $(document).height()-$(window).height()){
+			dest = $(document).height - $(window).height;
+		}
+		else{
+			dest = $(this.hash).offset().top - offset;
+		}
+		$('html,body').animate({scrollTop:dest}, 1000, 'swing');
+	});
+
+	$('html,body').animate({scrollTop:5}, 1000, 'swing');
 });
+
+Template.nav.reload = function(){
+	Session.get("reload");
+	return "";
+}
 
 Template.mainArea.stars = function(){
 	createStars(110, 3);

@@ -1,13 +1,24 @@
 
 <template name="nav">
   <div class="my-nav" data-magellan-expedition="fixed">
-      <dl class="sub-nav right">
-        <dd data-magellan-arrival="logo"><a href="#logo-row">Home</a></dd>
-        <dd data-magellan-arrival="services"><a href="#services-row">Services</a></dd>
-        <dd data-magellan-arrival="portfolio"><a href="#portfolio-heading">Portfolio</a></dd>
-        <dd data-magellan-arrival="about"><a href="#about-row">About Us</a></dd>
-        <dd data-magellan-arrival="contact"><a href="#contact-row">Contact</a></dd>
-      </dl>
+  	{{reload}}
+  	<nav class="top-bar" data-topbar>
+  	  <ul class="title-area">
+  	  	<li data-magellan-arrival="logo" class="name">
+  	  	<h1><a href="#logo-row">SHUFU</a></h1>
+  	  	</li>
+  	  	<li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+  	  </ul>
+  	  <section class="top-bar-section">
+	      <ul class="right">
+	        
+	        <li data-magellan-arrival="services"><a href="#services-row">Services</a></li>
+	        <li data-magellan-arrival="portfolio"><a href="#portfolio-heading">Portfolio</a></li>
+	        <li data-magellan-arrival="about"><a href="#about-row">About Us</a></li>
+	        <li data-magellan-arrival="contact" id="contact-li"><a href="#contact-row">Contact</a></li>
+	      </ul>
+      </section>
+      </nav>
   </div> 
 </template>
 
@@ -30,13 +41,13 @@
 <!-- MAIN BUTTONS -->
 <div class="row full-width black-background" id="button-row">
     <div class="medium-5 columns center-text inline">
-        <a href="#design-services-row" class="button expand mainbutton" > DESIGN </a>
+        <a href="#design-services-row" class="scroll button expand mainbutton" > DESIGN </a>
     </div>
     <div class="medium-2 columns center-text">
     	<h1 id="plus">+</h1>
     </div>
     <div class="medium-5 columns center-text inline">
-     	<a href="#app-dev-services-row" class="button expand mainbutton">APPLICATION DEVELOPMENT</a>
+     	<a href="#app-dev-services-row" class="scroll button expand mainbutton">APPLICATION DEVELOPMENT</a>
     </div>
 </div>
 </template>
@@ -61,16 +72,57 @@
 	<div class="row" data-magellan-destination="about" id="about-row">
 		<div class="row">
 		<div class="small-12 columns">
-			<p class="title-text"> YOUR NEW EMPLOYEES </p>
+			<p class="title-text"> ABOUT US </p>
 			<img id="our-photo" src="img/portrait.jpg">
 			<div class="row">
-				<div class="small-6 columns center-text">
-					<h2 class="inline center-text gray-words "> <a href="#" class="sam-plus"> Sam Johnson </a></h2> <span class="inline sam-plus"> <i class="general foundicon-plus"></i> </span>
+				<div class="medium-6 columns center-text">
+					<span class="resume-header">
+					<h2 class="inline center-text gray-words "> <a href="#" class="sam-plus"> Sam Johnson </a></h2> <span class="inline sam-plus"> <i class="general foundicon-plus"></i> </span></span>
 					<h5 class="center-text subheader"> End-to-end Developer </h5>
+					<ul class="text-left resume hide">
+					<li> <strong>2014 - Freelance Developer </strong>
+						<ul>
+							<li> Website Build - <em> Johnson Family Law LLC </em> </li>
+						</ul>
+					</li>
+					<li> <strong>2012 - 2014 - Software Developer</strong>, <em>Cisco Systems </em>
+						<ul>
+						<li> Lead Backend Engineer, Feedback Managament System</li>
+						<li> End-to-end Engineer, Enterprise Repository Search (Patent Pending)</li>
+						<li> User Experience Engineer </li> 
+						</ul>
+					</li>
+					<li> <strong>2012 - B.A. in Computer Science</strong>, <em>Colorado College </em> 
+						<ul>
+							<li>Thesis: Automated news shorting algorithm using Natural Language Processing</li>
+						</ul>
+					</li>
+					</ul>
 				</div>
-				<div class="small-6 columns center-text">
-					<h2 class="inline center-text gray-words"> Allison Milchling </h2> <span class="inline"> <i class="general foundicon-plus"></i> </span>
+				<div class="medium-6 columns center-text">
+					<span class="resume-header">
+					<h2 class="inline center-text gray-words "> <a href="#" class="sam-plus"> Allison Milchling </a></h2> <span class="inline sam-plus"> <i class="general foundicon-plus"></i> </span></span>
 					<h5 class="center-text subheader"> Designer / Front-end Developer </h5>
+					<ul class="text-left resume hide">
+					<li> <strong>2014 - Freelance Designer </strong>
+						<ul>
+							<li> Website Redesign/Rebuild -<em> Allied Management Group website</em> </li>
+							<li> Stationary, Mailing Design - <em>Recovery Roofing &amp; Restoration</em></li>
+							<li> Website Design, Logo Design, Stationary, Branding - <em>Johnson Family Law LLC</em></li>
+						</ul>
+					</li>
+
+					<li> <strong>2012 - 2013 - Graphic Designer / Program Coordinator</strong>, <em>Eat Fresh Maryland </em>
+						<ul>
+						<li> Website Administrator </li> 
+						<li> Event Identity </li>
+						<li> Stationary </li>
+						<li> Social Media Marketing</li>
+						</ul>
+					</li>
+					<li> <strong>2012 - B.S. in Chinese</strong>, <em>University of Maryland</em>
+					</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -97,7 +149,7 @@
 		<div class="row wrapper">
 		<div class="row port-item" data-reveal-id="johnson-modal">
 			<div class="medium-6 columns gray-background full-height ">
-			<h1 class="porttitle port-center-text">Johnson Family Law</h1>
+			<h1 class="porttitle port-center-text">Johnson Family Law LLC</h1>
 			<h5 class="subheader port-center-text">print and web design</h5>
 			</div>
 			<div class="medium-6 columns port-img-div full-height">
@@ -105,7 +157,7 @@
 			</div>
 		</div>
 
-		<div class="row port-item">
+		<div class="row port-item" data-reveal-id="moneybags-modal">
 			
 			<div class="medium-6 columns gray-background full-height right">
 				<h1 class="porttitle port-center-text">Dr. Moneybags</h1>
@@ -117,7 +169,7 @@
 			
 		</div>
 
-		<div class="row port-item">
+		<div class="row port-item" data-reveal-id="allied-modal">
 			<div class="medium-6 columns gray-background full-height">
 				<h1 class="porttitle port-center-text">Allied Management Group</h1>
 				<h5 class="subheader port-center-text">web design and development</h5>
@@ -129,19 +181,73 @@
 		</div>
 	</div>
 
-	<div id="johnson-modal" class="reveal-modal" data-reveal>
-	<h1 class="center-text"> Johnson Family Law </h1>
-	<a class="close-reveal-modal">&#215;</a>
+	<!-- Charles site popup -->
+	<div id="johnson-modal" class="reveal-modal center-text" data-reveal>
+		<h1 class="center-text"> Johnson Family Law LLC</h1>
+		<a href="www.johnsonfamilylaw.net" class="text-center">www.johnsonfamilylaw.net</a>
+		
+		<div class="row">
+			<div class="medium-6 columns">
+				<img src="img/cardback.png">
+			</div>
+			<div class="medium-6 columns">
+				<img src="img/cardfront.png">
+			</div>
+		</div>
+		<div class="row">
+		<div class="small-12">
+			<img src="img/compshot.png">
+		</div>
+		</div>
+
+		<h5>Logo Design</h5>
+		<h5>Stationary</h5>
+		<h5>Responsive Web Design/Development</h5>
+		<h5>Content Writing</h5>
+		<a class="close-reveal-modal">&#215;</a>
 	</div>
 
-	<div id="moneybags-modal" class="reveal-modal" data-reveal>
-	<h1 class="center-text"> Dr. Moneybags </h1>
-	<a class="close-reveal-modal">&#215;</a>
+	<!-- moneybags popup -->
+	<div id="moneybags-modal" class="reveal-modal center-text" data-reveal>
+		<h1 class="center-text"> Dr. Moneybags</h1>
+		<p>Website in progress</p>
+		<a href="www.drmoneybags.com" class="text-center"></a>
+		
+		<div class="row">
+			<div class="medium-6 columns">
+				<img src="img/drmbhappy.png">
+			</div>
+			<div class="medium-6 columns">
+				<img src="img/drmbsad.png">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12">
+				<img src="img/drmbnav.jpg">
+			</div>
+			<h5>Mobile App Development</h5>
+			<h5>UX Research</h5>
+			<h5>UI and UX Design</h5>
+			<h5>Character Illustration</h5>
+			<h5>Responsive Web Development</h5>
+		</div>
+		<a class="close-reveal-modal">&#215;</a>
 	</div>
 
-	<div id="allied-modal" class="reveal-modal" data-reveal>
-	<h1 class="center-text"> Allied Management Group </h1>
-	<a class="close-reveal-modal">&#215;</a>
+	<!-- allied site popup -->
+	<div id="allied-modal" class="reveal-modal center-text" data-reveal>
+		<h1 class="center-text"> Allied Management Group</h1>
+		<p>Website in progress </p>
+		<div class="row">
+			<div class="small-12">
+				<img src="img/alliedsite.png">
+			</div>
+			<h5>Email Templates</h5>
+			<h5>Social Media</h5>
+			<h5>Content Writing</h5>
+			<h5>Responsive Web Development</h5>
+		</div>
+		<a class="close-reveal-modal">&#215;</a>
 	</div>
 		
 </template>
@@ -159,27 +265,28 @@
 	<div class="row full-width circles-row">
 		<div class="medium-3 columns process-circle">
 			<div class="white-process-circle center-horiz">
-			 <img class="process-img" src="img/gather.gif" alt="Gather">
+			 <img class="process-img" src="img/gatherfirst.png" id="gather" alt="Gather">
 			</div>
 			<h4 class="center-text">Gather</h4>
 			<h5 class="subheader center-text hidden">your ideas</h5>
 		</div>
 		<div class="medium-3 columns process-circle">
 			<div class="white-process-circle center-horiz ">
-				<img class="process-img" src="img/design.gif" alt="Design">
+				<img class="process-img" src="img/designfirst.png" id="design" alt="Design">
 			</div>
 			<h4 class="center-text">Design</h4>
 			<h5 class="subheader center-text hidden">something beautiful and orderly</h5>
 		</div>
 		<div class="medium-3 columns process-circle">
 			<div class="white-process-circle center-horiz">
+				<img class="process-img code-img" src="img/codefirst.png" id="code" alt="Code">
 			</div>
 			<h4 class="center-text">Code</h4>
 			<h5 class="subheader center-text hidden">it into reality</h5>
 		</div>
 		<div class="medium-3 columns process-circle">
 			<div class="white-process-circle center-horiz">
-			<img class="process-img" src="img/impress.gif" alt="Impress">
+			<img class="process-img" src="img/impress.gif" id="impress" alt="Impress">
 			</div>
 			<h4 class="center-text">Impress</h4>
 			<h5 class="subheader center-text hidden">everybody with the result</h5>
@@ -194,7 +301,8 @@
 		<p class="center-justify">With each design, our goal is to exactly represent your point of view. We strike a level balance between eye-catching beauty and strategic organization, keeping things clean, simple, and intuitive. Our designs captivate target audiences while further inspiring the businesses they represent. </p>
 		</div>
 		<div class="medium-5 columns">
-
+		<img class="python-logo code-logo" src="img/python-logo.png">
+		<img class="meteor-logo code-logo" src="img/meteor-logo.png">
 		</div>
 	</div>
 
@@ -204,7 +312,8 @@
 		<p class="center-justify">We want to take that idea you scribbled on a napkin and turn it into a well-oiled machine. No matter the size of the idea, we want to come alongside you and shape it into a robust application. No matter the format, we are here to construct an application that features every component of your vision.</p>
 		</div>
 		<div class="medium-5 columns">
-
+		<img class="python-logo code-logo" src="img/mongodb-logo.png">
+		<img class="meteor-logo code-logo" src="img/html5-logo.png">
 		</div>
 	</div>
 
@@ -213,7 +322,7 @@
 
 <template name="contact">
 	<div class="row" id="contact-row" data-magellan-destination="contact">
-	{{#sectionHeaderWrapper title="Help Us, Help You"}}{{/sectionHeaderWrapper}}
+	{{#sectionHeaderWrapper title="Contact"}}{{/sectionHeaderWrapper}}
 		<div class="medium-6 columns">
 			<h2> Our Information </h2>
 			<h4> Work: <a href="tel:+14109847717">+1 (410) 984 - 7717 </a></h4>
@@ -225,7 +334,7 @@
 			<h2> Send us a message </h2>
 			<form data-abide="ajax" id="email-form">
 				<div class="name-field">
-					<input id="contact-name" type="text" required pattern="[a-zA-z]+" placeholder="Your Name">
+					<input id="contact-name" type="text" required pattern="[a-zA-z ]+" placeholder="Your Name">
 					<small class="error"> Name is required and it must be only letters </small>
 				</div>
 				<div class="email-field">

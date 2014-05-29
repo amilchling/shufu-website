@@ -1,13 +1,64 @@
+[data-magellan-expedition-clone]{
+	visibility: hidden;
+}
+
 #footer{
 	background-color: #e5e5e5;
 	border-top: 1px solid #909090;
 	color: #333;
 }
 
+.top-bar{
+	overflow: hidden;
+	background: rgba(0,0,0,0);
+}
+
+.top-bar-section ul{
+	background: rgba(0,0,0,.25);
+}
+
+.top-bar-section ul li, .top-bar-section li:not(.has-form) a:not(.button){
+	background: rgba(0,0,0,0);
+}
+
+.top-bar-section li.active:not(.has-form) a:not(.button){
+	background-color: #88e0ff;
+}
+
+a{
+	color: #88e0ff;
+}
+
+.sub-nav li.active a{
+	background-color: #88e0ff;
+}
+
+.code-logo{
+	margin-top: 67px;
+	margin-left: 20px;
+}
+
+.python-logo{
+	width: 200px;
+}
+
+.meteor-logo{
+	height: 100px;
+}
+
 .process-img{
 	width: 91px;
 	padding-top: 9px;
 	padding-left: 8px;
+}
+
+.process-img.code-img{
+	height: 64px;
+	width: 600px;
+	margin-left: 9px;
+	overflow: hidden;
+	position: absolute;
+	margin-top: 16px;
 }
 
 #services-heading{
@@ -46,13 +97,13 @@
 
 .my-nav{
 	z-index: 10000;
-	background-color: black;
+	background: rgba(0,0,0,.25);
 }
 
 #logo-img{
 	position: relative;
 	z-index: 100;
-	
+	padding-top: 90px;
 }
 
 .fixed{
@@ -61,6 +112,7 @@
 
 #logo-row{
 	height: 60%;
+	margin-top: -66px;
 }
 
 #button-row{

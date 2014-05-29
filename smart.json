@@ -3,6 +3,7 @@
     "zurb-foundation": {},
     "foundation-icons-general": {},
     "stellar": {},
-    "moment": {}
+    "moment": {},
+    "jquery-waypoints2": {}
   }
 }

@@ -5,7 +5,8 @@
       "zurb-foundation": {},
       "foundation-icons-general": {},
       "stellar": {},
-      "moment": {}
+      "moment": {},
+      "jquery-waypoints2": {}
     },
     "packages": {
       "zurb-foundation": {
@@ -27,6 +28,11 @@
         "git": "https://github.com/acreeger/meteor-moment.git",
         "tag": "v2.6.0",
         "commit": "26156df681750fd6e6ed77043eef32b6653ebbdf"
+      },
+      "jquery-waypoints2": {
+        "git": "https://github.com/peerlibrary/meteor-jquery-waypoints2.git",
+        "tag": "v2.0.3.1",
+        "commit": "de163ced4ef1dc888ee6b192da722b05d6eb41da"
       }
     }
   }
