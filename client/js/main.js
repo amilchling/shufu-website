@@ -22,6 +22,10 @@ Meteor.startup(function(){
 		$(this).waypoint('disable');
 	}, {offset: 400});
 
+	$("#bio-text").waypoint(function(){
+		$("#contact-li").addClass("active");
+	}, {offset: 300});
+
 	$(".process-circle").mouseenter(function(){
 		if(!$(this).closest(".process-circle").data("visible")){
 			$(this).closest(".process-circle").data("visible", true)

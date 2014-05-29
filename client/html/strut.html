@@ -14,7 +14,7 @@
         <li data-magellan-arrival="services"><a href="#services-row">Services</a></li>
         <li data-magellan-arrival="portfolio"><a href="#portfolio-heading">Portfolio</a></li>
         <li data-magellan-arrival="about"><a href="#about-row">About Us</a></li>
-        <li data-magellan-arrival="contact"><a href="#contact-row">Contact</a></li>
+        <li data-magellan-arrival="contact" id="contact-li"><a href="#contact-row">Contact</a></li>
       </ul>
       </section>
       </nav>
@@ -150,7 +150,7 @@
 			</div>
 		</div>
 
-		<div class="row port-item">
+		<div class="row port-item" data-reveal-id="moneybags-modal">
 			
 			<div class="medium-6 columns gray-background full-height right">
 				<h1 class="porttitle port-center-text">Dr. Moneybags</h1>
@@ -162,7 +162,7 @@
 			
 		</div>
 
-		<div class="row port-item">
+		<div class="row port-item" data-reveal-id="allied-modal">
 			<div class="medium-6 columns gray-background full-height">
 				<h1 class="porttitle port-center-text">Allied Management Group</h1>
 				<h5 class="subheader port-center-text">web design and development</h5>
@@ -174,37 +174,73 @@
 		</div>
 	</div>
 
+	<!-- Charles site popup -->
 	<div id="johnson-modal" class="reveal-modal center-text" data-reveal>
-	<h1 class="center-text"> Johnson Family Law </h1>
-	<a href="www.johnsonfamilylaw.net" class="text-center">www.johnsonfamilylaw.net</a>
-	<h5>Logo Design</h5>
-	<h5>Stationary</h5>
-	<h5>Responsive Web Design/Development</h5>
-	<h5>Content Writing</h5>
-	<div class="row">
-		<div class="medium-6 columns">
-			<img src="img/cardback.png">
+		<h1 class="center-text"> Johnson Family Law </h1>
+		<a href="www.johnsonfamilylaw.net" class="text-center">www.johnsonfamilylaw.net</a>
+		
+		<div class="row">
+			<div class="medium-6 columns">
+				<img src="img/cardback.png">
+			</div>
+			<div class="medium-6 columns">
+				<img src="img/cardfront.png">
+			</div>
 		</div>
-		<div class="medium-6 columns">
-			<img src="img/cardfront.png">
+		<div class="row">
+		<div class="small-12">
+			<img src="img/compshot.png">
 		</div>
-	</div>
-	<div class="row">
-	<div class="small-12">
-		<img src="img/compshot.png">
-	</div>
-	</div>
-	<a class="close-reveal-modal">&#215;</a>
+		</div>
+
+		<h5>Logo Design</h5>
+		<h5>Stationary</h5>
+		<h5>Responsive Web Design/Development</h5>
+		<h5>Content Writing</h5>
+		<a class="close-reveal-modal">&#215;</a>
 	</div>
 
-	<div id="moneybags-modal" class="reveal-modal" data-reveal>
-	<h1 class="center-text"> Dr. Moneybags </h1>
-	<a class="close-reveal-modal">&#215;</a>
+	<!-- moneybags popup -->
+	<div id="moneybags-modal" class="reveal-modal center-text" data-reveal>
+		<h1 class="center-text"> Dr. Moneybags</h1>
+		<p>Website in progress</p>
+		<a href="www.drmoneybags.com" class="text-center"></a>
+		
+		<div class="row">
+			<div class="medium-6 columns">
+				<img src="img/drmbhappy.png">
+			</div>
+			<div class="medium-6 columns">
+				<img src="img/drmbsad.png">
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12">
+				<img src="img/drmbnav.jpg">
+			</div>
+			<h5>Mobile App Development</h5>
+			<h5>UX Research</h5>
+			<h5>UI and UX Design</h5>
+			<h5>Character Illustration</h5>
+			<h5>Responsive Web Development</h5>
+		</div>
+		<a class="close-reveal-modal">&#215;</a>
 	</div>
 
-	<div id="allied-modal" class="reveal-modal" data-reveal>
-	<h1 class="center-text"> Allied Management Group </h1>
-	<a class="close-reveal-modal">&#215;</a>
+	<!-- allied site popup -->
+	<div id="allied-modal" class="reveal-modal center-text" data-reveal>
+		<h1 class="center-text"> Allied Management Group</h1>
+		<p>Website in progress </p>
+		<div class="row">
+			<div class="small-12">
+				<img src="img/alliedsite.png">
+			</div>
+			<h5>Email Templates</h5>
+			<h5>Social Media</h5>
+			<h5>Content Writing</h5>
+			<h5>Responsive Web Development</h5>
+		</div>
+		<a class="close-reveal-modal">&#215;</a>
 	</div>
 		
 </template>
