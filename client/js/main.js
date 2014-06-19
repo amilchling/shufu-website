@@ -19,28 +19,19 @@ Meteor.startup(function(){
 		$(this).find('.hidden').each(function(index){
 			$(this).css({"opacity": 0, "visibility": "visible"}).animate({opacity:1}, 1000);
 		});
+
+		$(".process-circle").each(function(){
+			$(this).data("visible", true)
+			var el = $(this).find(".process-img");
+			var newSrc = "img/" + el.attr('id') + ".gif";
+			el.attr('src', newSrc);
+		});
 		$(this).waypoint('disable');
-	}, {offset: 400});
+	}, {offset: 70});
 
 	$("#bio-text").waypoint(function(){
 		$("#contact-li").addClass("active");
 	}, {offset: 300});
-
-	$(".process-circle").mouseenter(function(){
-		if(!$(this).closest(".process-circle").data("visible")){
-			$(this).closest(".process-circle").data("visible", true)
-			var el;
-			if($(this).hasClass("process-img")){
-				el = $(this);
-			}
-			else{
-				el = $(this).find(".process-img");
-			}
-			var newSrc = "img/" + el.attr('id') + ".gif";
-			console.log(newSrc);
-			el.attr('src', newSrc);
-		}
-	});
 
 	$(".resume-header").click(function(event){
 		event.preventDefault();
